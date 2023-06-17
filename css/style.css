@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --color-pmry-pale: hsl(225, 100%, 94%);
+    --color-pmry-bright: hsl(245, 75%, 52%);
+
+    --color-nt-very-pale: hsl(225, 100%, 98%);
+    --color-nt-desaturated: hsl(224, 23%, 55%);
+    --color-nt-dark: hsl(223, 47%, 23%);
+    --color-nt-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+button {
+    font: inherit;
+}
+
+h1, h2, h3, p {
+    overflow-wrap: break-word;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;;
+    font-size: 16px;
+    color: var(--color-nt-desaturated);
+    background-color: var(--color-pmry-pale);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    line-height: 1.5;  
+}
+
+.container {
+    background-color: var(--color-nt-white);
+    border: none;
+    border-radius: 1.1rem;
+    box-shadow: 3px 3px 15px hsl(228, 45%, 44%, 0.15);
+    overflow: hidden;
+    max-width: 375px;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+}
+
+.main .title {
+    font-size: 1.7rem;
+    color: var(--color-nt-dark);
+    font-weight: 700;
+}
+
+.main .description {   
+    font-weight: 500;
+    padding: 0 30px;
+}
+
+.plan-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-nt-very-pale);
+    border-radius: 1.1rem;
+    border: none;
+    padding: 1rem;
+}
+
+.plan-info div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.plan-price {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.plan-price b {
+    color: var(--color-nt-dark);
+}
+
+.plan-price span {
+    color: var(--color-nt-desaturated);
+}
+
+.link {
+    text-decoration: underline;
+    color: var(--color-pmry-bright);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: none;
+    opacity: 60%;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.btns button {
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btns .btns-pay {
+    width: 100%;
+    background-color: var(--color-pmry-bright);
+    color: var(--color-pmry-pale);
+    font-weight: 900;
+    box-shadow: 2px 5px 20px hsl(245, 75%, 52%, 0.5);
+    transition: 0.2s;
+}
+
+.btns .btns-pay:hover {
+    opacity: 0.6;
+    color: var(--color-nt-white);
+}
+
+.btns .btn-cancel {
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-nt-desaturated);
+    width: 50%;
+}
+
+.btns .btn-cancel:hover {
+    color: var(--color-nt-dark);
+}
+
+/* FOOTER */
+.attribution {
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--color-nt-grayish);
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+    /* color: hsl(228, 45%, 44%); */
+    color: var(--color-pmry-bright);
+}
+
+/* MEDIAQUERY */
+@media screen and (min-width: 400px) {
+    body {
+        background-image: url("../images/pattern-background-desktop.svg");
+    }
+
+    .container {
+        min-width: 400px;
+    }
+
+    .main .description {
+        padding: 0 20px;
+    }
+}
